@@ -3,6 +3,20 @@
   "name": "Hello Extensions",
   "description": "Base Level Extension",
   "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.bing.com/*", "https://cn.bing.com/*","https://www.google.com/*"],
+      "js": ["scripts/content.js"]
+    }
+  ],
   "action": {
     "default_popup": "hello.html",
     "default_icon": "atMyNotion.png"
