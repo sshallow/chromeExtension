@@ -25,7 +25,11 @@ function displayWords(words) {
     sidebar.insertBefore(wordList, firstChild);
 }
 
+
 const words = extractWordsFromSearchQuery();
 if (words.length > 0) {
     displayWords(words);
+
+    console.log("读取")
+
 }
